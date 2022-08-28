@@ -3,6 +3,7 @@ import styled from "styled-components"
 import bg from "../images/bg.png"
 import logo from "../images/logo.png"
 
+
 const Wrapper = styled.div`
   height: 100vh;
   background-color: #F3F2F3;
@@ -29,6 +30,7 @@ const Logo = styled.img`
 const Headline = styled.div`
    font-size: 40px;
    color: #6DA328;
+   
 `
 const FormContainer = styled.div`
   

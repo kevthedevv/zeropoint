@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import bg from "../images/bg.png"
-import logo from "../images/logo.png"
+import Menu from "../components/Menu"
+import Dashboard from '../components/Dashboard'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -10,6 +11,7 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
+  overflow: hidden;
 `
 const LogoContainer = styled.div`
   display: flex;
@@ -49,6 +51,8 @@ const Button = styled.div`
 const Login = () => {
   return (
     <Wrapper>
+      <Menu></Menu>
+      <Dashboard></Dashboard>
     </Wrapper>
   )
 }
