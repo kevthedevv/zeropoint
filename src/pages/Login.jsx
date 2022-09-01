@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import bg from "../images/bg.png"
 import logo from "../images/logo.png"
+import {Link} from "react-router-dom"
 
 
 const Wrapper = styled.div`
@@ -80,7 +81,7 @@ const Login = () => {
             Zero Point
           </Headline>
       </LogoContainer>
-        <P style={{ marginBottom: "20px"}}>Doesn't have an account yet? <span style={{ color: "#6DA328", fontWeight: "bold"}}>SIGN UP</span></P>
+        <P style={{ marginBottom: "20px"}}>Doesn't have an account yet? <Link to="/register"><span style={{ color: "#6DA328", fontWeight: "bold"}}>SIGN UP</span></Link></P>
         <FormContainer>
               <P>Username</P>
               <InputContainer style={{ marginBottom: "10px" }}>
@@ -88,9 +89,11 @@ const Login = () => {
               </InputContainer>
               <P>Password</P>
               <InputContainer style={{ marginBottom: "20px" }}>
-                <Input style={{  fontFamily: "Verdana", letterSpacing: "0.125em"}}></Input>
+                <Input style={{  fontFamily: "Verdana", letterSpacing: "0.125em"}} type="password"></Input>
               </InputContainer>
+              <Link to="/main">
               <Button type='submit'>Login</Button>
+              </Link>
             </FormContainer>
       </LoginContainer>
     </Wrapper>

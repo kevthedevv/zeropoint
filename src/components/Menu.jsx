@@ -6,6 +6,7 @@ import Face4Icon from '@mui/icons-material/Face4';
 import HubIcon from '@mui/icons-material/Hub';
 import ArticleIcon from '@mui/icons-material/Article';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import {Link} from "react-router-dom"
 
 const Wrapper = styled.div`
   width: 390px;
@@ -63,7 +64,9 @@ const Menu = () => {
         <MenuItems><IconContainer><Face4Icon></Face4Icon></IconContainer>Profile</MenuItems>
         <MenuItems><IconContainer><HubIcon></HubIcon></IconContainer>Network</MenuItems>
         <MenuItems><IconContainer><ArticleIcon></ArticleIcon></IconContainer>Reports</MenuItems>
-        <MenuItems style={{ marginTop: "100px"}}><IconContainer><ExitToAppIcon></ExitToAppIcon></IconContainer>Logout</MenuItems>
+        <Link to="/">
+         <MenuItems style={{ marginTop: "100px"}}><IconContainer><ExitToAppIcon></ExitToAppIcon></IconContainer>Logout</MenuItems>
+        </Link>
       </MenuContainer>
 
     </Wrapper>
