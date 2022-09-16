@@ -11,11 +11,10 @@ import {Link} from "react-router-dom"
 const Wrapper = styled.div`
   width: 390px;
   height: 100vh;
-  background-color: #F8F8FA;
+  background-color: #0A0A0A;
   padding-left: 40px;
-  padding-top: 40px;
+  padding-top: 60px;
 `
-
 const LogoContainer = styled.div`
   display: flex;
   padding-left: 20px;
@@ -39,32 +38,38 @@ const MenuItems = styled.div`
   align-items: center;
   padding: 20px 0 20px 40px;
   font-size: 20px;
+  color: #d8d8d8;
   margin: 0;
     &:hover{
-        background-color: white;
+        background-color: #6DA328;
         margin-right: 50px;
         border-radius: 50px;
-        color: #6DA328;
-        box-shadow: 5px 5px 18px #dfdfdf;
+        color: white;
+        //  box-shadow: 5px 5px 18px #dfdfdf;
         cursor: pointer;
     }
 `
 const IconContainer = styled.div`
   margin-right: 10px;
+  padding: 0;
 `
 const Menu = () => {
   return (
     <Wrapper>
-      <LogoContainer>
-        <Logo src={logo}></Logo>
-        <Headline>Zero Point</Headline>
-      </LogoContainer>
       <MenuContainer>
+        <Link to="/dashboard" style={{ textDecoration: 'none' }}>
         <MenuItems><IconContainer><GridViewIcon></GridViewIcon></IconContainer>Dashboard</MenuItems>
+        </Link>
+        <Link to="/profile" style={{ textDecoration: 'none' }}>
         <MenuItems><IconContainer><Face4Icon></Face4Icon></IconContainer>Profile</MenuItems>
+        </Link>
+        <Link to="/network" style={{ textDecoration: 'none' }}>
         <MenuItems><IconContainer><HubIcon></HubIcon></IconContainer>Network</MenuItems>
+        </Link>
+        <Link to="/reports" style={{ textDecoration: 'none' }}>
         <MenuItems><IconContainer><ArticleIcon></ArticleIcon></IconContainer>Reports</MenuItems>
-        <Link to="/">
+        </Link>
+        <Link to="/" style={{ textDecoration: 'none' }}>
          <MenuItems style={{ marginTop: "100px"}}><IconContainer><ExitToAppIcon></ExitToAppIcon></IconContainer>Logout</MenuItems>
         </Link>
       </MenuContainer>

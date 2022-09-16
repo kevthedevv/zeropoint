@@ -10,9 +10,8 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(${bg});;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-color: #000000;
+       
 `
 const MainContainer = styled.div`
         width: 800px;
@@ -27,9 +26,10 @@ const FormConainerLeft = styled.div`
 `
 const FormConainerRight = styled.div`
         
-`
+`       
 const P = styled.div`
   margin-bottom: 3px;
+  color: #d8d8d8;
 `
 const InputContainer = styled.div`
   display: flex;
@@ -44,6 +44,7 @@ const Input = styled.input`
   background-color: transparent;
   outline: none;
   font-size: 1rem;
+  color: #d8d8d8;
   width: 340px;
 `
 const Select = styled.select`
@@ -52,6 +53,7 @@ const Select = styled.select`
   outline: none;
   font-size: 1rem;
   width: 340px;
+  color: #d8d8d8;
 `
 const CardTitle = styled.h1`
     font-weight: 100;
@@ -122,7 +124,7 @@ const Register = () => {
                                                 <option value="2">Right</option>
                                                 </Select>
                                         </InputContainer>
-                                        <Link to="/">
+                                        <Link to="/" style={{ textDecoration: 'none' }}>
                                                 <Button>Register</Button>
                                         </Link>
                                 </FormConainerRight>

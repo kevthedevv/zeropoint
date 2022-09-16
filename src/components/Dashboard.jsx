@@ -1,12 +1,28 @@
 import React from 'react'
 import styled from "styled-components"
+import logo from "../images/logo.png"
+import {Link} from "react-router-dom"
 
 
 const Wrapper = styled.div`
     width: 1530px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 50px;
+`
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Logo = styled.img`
+  height: 120px;
+  margin-right: 20px;
+`
+const Headline = styled.div`
+   font-size: 60px;
+   color: #ffffff;
+   
 `
 const MainContainer = styled.div`
     width: 1000px;
@@ -60,7 +76,7 @@ const AccountSummary = styled.div`
     height: 300px;
     background-color: #FFFFFF;
     border-radius: 50px;
-    box-shadow: 5px 5px 18px #dfdfdf;
+    //box-shadow: 5px 5px 18px #dfdfdf;
 `
 const AccountSummaryContainer = styled.div`
       padding: 20px 0 0 50px;
@@ -95,6 +111,12 @@ const Dashboard = () => {
     <Wrapper>
         <MainContainer>
             <UpperContainer>
+                <LogoContainer>
+                    <Logo src={logo}></Logo>
+                    <Headline>Zero Point</Headline>
+                </LogoContainer>
+            </UpperContainer>
+            <UpperContainer>
                 <Activity>
                     <ActivityContainer>
                         <CardTitle>YOUR ACTIVITY</CardTitle>
@@ -105,7 +127,9 @@ const Dashboard = () => {
                     </ActivityContainer>
                 </Activity>
                 <ButtonsContainer>
-                    <Button>Profile</Button>
+                    <Link to="/profile" style={{ textDecoration: 'none' }}>
+                        <Button>Profile</Button>
+                    </Link>
                     <Button>View Your Network</Button>
                     <Button>My Transactions</Button>
                 </ButtonsContainer>
