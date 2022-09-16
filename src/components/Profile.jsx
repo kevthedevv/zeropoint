@@ -33,7 +33,10 @@ const PersonalInformation = styled.div`
     background-color: #2E2E2E;
     border-radius: 50px;
     padding: 20px 0 0 50px;
-    //box-shadow: 5px 5px 18px #dfdfdf;
+    @media (max-width: 1280px) {
+    width: 800px;
+    height: 550px;
+}
 `
 const CardTitle = styled.h1`
     font-weight: 100;

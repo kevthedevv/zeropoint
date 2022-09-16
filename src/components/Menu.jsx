@@ -12,42 +12,33 @@ const Wrapper = styled.div`
   width: 390px;
   height: 100vh;
   background-color: #0A0A0A;
-  padding-left: 40px;
-  padding-top: 60px;
-`
-const LogoContainer = styled.div`
   display: flex;
-  padding-left: 20px;
-  padding-bottom: 30px;
-`
-const Logo = styled.img`
-  height: 50px;
-  width: 90px;
-  margin-right: 20px;
-`
-const Headline = styled.div`
-   font-size: 40px;
-   color: #6DA328;
-   
+  justify-content: center;
+  @media (max-width: 1280px) {
+    min-width: 250px;
+}
+  
 `
 const MenuContainer = styled.div`
-  
+  padding-top: 50px;
 `
 const MenuItems = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px 0 20px 40px;
+  padding: 20px 70px 20px 70px;
   font-size: 20px;
   color: #d8d8d8;
   margin: 0;
     &:hover{
         background-color: #6DA328;
-        margin-right: 50px;
         border-radius: 50px;
         color: white;
         //  box-shadow: 5px 5px 18px #dfdfdf;
         cursor: pointer;
     }
+    @media (max-width: 1280px) {
+      padding: 20px 20px 20px 20px;
+}
 `
 const IconContainer = styled.div`
   margin-right: 10px;

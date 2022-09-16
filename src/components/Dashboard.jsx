@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    
 `
 const LogoContainer = styled.div`
   display: flex;
@@ -27,6 +28,9 @@ const Headline = styled.div`
 const MainContainer = styled.div`
     width: 1000px;
     height: 700px;
+    @media (max-width: 1280px) {
+        width: 900px;
+}
 `
 const Activity = styled.div`
     width: 570px;
@@ -35,24 +39,36 @@ const Activity = styled.div`
     height: 285px;
     border-radius: 50px;
     background-color: #FDBF47;
+    @media (max-width: 1280px) {
+        width: 400px;
+}
 `
 const UpperContainer = styled.div`
     display: flex;
     margin-bottom: 30px;
-   
+`
+const MiddleContainer = styled.div`
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
 `
 const LowerContainer = styled.div`
 
 `
+const ButtonsContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
 
 const Button = styled.div`
-    padding: 10px;
-    height: 60px;
+    height: 80px;
     background-color: #6DA328;
     color: white;
     cursor: pointer;
     border: 0;
-    width: 390px;
+    width: 100%;
     border-radius: 50px;
 
     &:hover,&:focus{
@@ -62,15 +78,15 @@ const Button = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    @media (max-width: 1280px) {
+     
+}
 `
 const ActivityContainer = styled.div`
       padding: 20px 0 0 50px;
 `
 
-const ButtonsContainer = styled.div`
-    width: 100%;
-`
+
 const AccountSummary = styled.div`
     width: 100%;
     height: 300px;
@@ -116,7 +132,7 @@ const Dashboard = () => {
                     <Headline>Zero Point</Headline>
                 </LogoContainer>
             </UpperContainer>
-            <UpperContainer>
+            <MiddleContainer>
                 <Activity>
                     <ActivityContainer>
                         <CardTitle>YOUR ACTIVITY</CardTitle>
@@ -133,7 +149,7 @@ const Dashboard = () => {
                     <Button>View Your Network</Button>
                     <Button>My Transactions</Button>
                 </ButtonsContainer>
-            </UpperContainer>
+            </MiddleContainer>
             <LowerContainer>
                 <AccountSummary>
                     <AccountSummaryContainer>

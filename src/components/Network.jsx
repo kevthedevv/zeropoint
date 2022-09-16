@@ -25,7 +25,10 @@ const MainContainer = styled.div`
 `
 
 const Image = styled.img`
-        
+        @media (max-width: 1280px) {
+    width: 800px;
+    height: 550px;
+}
 `
 const Button = styled.div`
         padding: 10px;
